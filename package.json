@@ -1,0 +1,24 @@
+{
+  "name": "week-3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "check-types": "tsc --noEmit",
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "accounts": "hardhat accounts",
+    "clean": "hardhat clean"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox-viem": "^3.0.0",
+    "@openzeppelin/contracts": "^5.1.0",
+    "hardhat": "^2.22.15"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "typescript": "^5"
+  }
+}
