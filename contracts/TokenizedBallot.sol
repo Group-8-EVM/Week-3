@@ -33,7 +33,7 @@ contract TokenizedBallot {
         proposals[proposal].voteCount += amount;
     }
 
-    function getVotePower(address voter) public returns (uint256) {
+    function getVotePower(address voter) public view returns (uint256) {
         return tokenContract.getPastVotes(voter, targetBlockNumber) - votePowerSpent[voter];
     }
 
