@@ -1,9 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.7.0 <0.9.0;
-
-interface IMyToken {
-    function getPastVotes(address, uint256) external view returns (uint256);
-}
+import { MyVoteToken } from "./My20Votes.sol";
 
 contract TokenizedBallot {
     struct Proposal {
@@ -11,16 +8,17 @@ contract TokenizedBallot {
         uint voteCount;
     }
 
-    IMyToken public tokenContract;
+    MyVoteToken public tokenContract;
     Proposal[] public proposals;
     uint256 public targetBlockNumber;
+    mapping(address => uint256) public votePowerSpent;
 
     constructor(
         bytes32[] memory _proposalNames,
-        address _tokenContract,
+        MyVoteToken _tokenContract,
         uint256 _targetBlockNumber
     ) {
-        tokenContract = IMyToken(_tokenContract);
+        tokenContract = _tokenContract;
         targetBlockNumber = _targetBlockNumber;
         // TODO: Validate if targetBlockNumber is in the past
         for (uint i = 0; i < _proposalNames.length; i++) {
@@ -29,7 +27,14 @@ contract TokenizedBallot {
     }
 
     function vote(uint256 proposal, uint256 amount) external {
-        // TODO: Implement vote function
+        uint256 votePower = getVotePower(msg.sender);
+        require(votePower >= amount, "error: trying to vote with more votes then available");
+        votePowerSpent[msg.sender] += amount;
+        proposals[proposal].voteCount += amount;
+    }
+
+    function getVotePower(address voter) public returns (uint256) {
+        return tokenContract.getPastVotes(voter, targetBlockNumber) - votePowerSpent[voter];
     }
 
     function winningProposal() public view returns (uint winningProposal_) {
