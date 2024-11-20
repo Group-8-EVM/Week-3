@@ -22,6 +22,23 @@ transaction:  0x1c5d2850db661c4322a05ec16cb1a91133b160fd2cfe59429c4a06119652e5b6
 
 ---
 
+mint tokens wtih:
+```shell
+npx ts-node .\scripts\MintVoteToken.ts 0x13d2b334d6a6a73427923436cfa0f1ad363a1500 10
+```
+transaction:  0x1c5d2850db661c4322a05ec16cb1a91133b160fd2cfe59429c4a06119652e5b6
+
+
+---
+
+get vote tokens by:
+```shell
+npx ts-node .\scripts\GetVoteTokens.ts 0x13d2b334d6a6a73427923436cfa0f1ad363a1500 0x92FE67bE9C0697ee32768cd2B2BCDC411774A056
+```
+0x92FE67bE9C0697ee32768cd2B2BCDC411774A056 has 20 voting tokens and 0 voting power
+
+---
+
 deployed the ballot wtih:
 ```shell
 npx hardhat run .\scripts\DeployTokenizedBallot.ts 
