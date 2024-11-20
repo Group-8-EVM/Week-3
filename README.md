@@ -39,6 +39,39 @@ npx ts-node .\scripts\GetVoteTokens.ts 0x13d2b334d6a6a73427923436cfa0f1ad363a150
 
 ---
 
+get vote tokens by:
+```shell
+npx ts-node .\scripts\GetVoteTokens.ts 0x13d2b334d6a6a73427923436cfa0f1ad363a1500 0x56951EdE351a4f2Ef80E650f94E4f5f0ebBDAA8c
+```
+0x56951EdE351a4f2Ef80E650f94E4f5f0ebBDAA8c has 0 voting tokens and 0 voting power
+
+---
+
+
+transferring 5 tokens to 0x92FE67bE9C0697ee32768cd2B2BCDC411774A056 by:
+```shell
+npx ts-node .\scripts\TransferVoteToken.ts 0x13d2b334d6a6a73427923436cfa0f1ad363a1500 0x56951EdE351a4f2Ef80E650f94E4f5f0ebBDAA8c 5
+```
+transaction: 0xd95a47d602f712b49f55665a949f84312fe1d7d84e3f4dae74a013be672894d1
+
+
+---
+
+get vote tokens by:
+```shell
+npx ts-node .\scripts\GetVoteTokens.ts 0x13d2b334d6a6a73427923436cfa0f1ad363a1500 0x92FE67bE9C0697ee32768cd2B2BCDC411774A056
+```
+0x92FE67bE9C0697ee32768cd2B2BCDC411774A056 has 15 voting tokens and 0 voting power
+
+---
+
+get vote tokens by:
+```shell
+npx ts-node .\scripts\GetVoteTokens.ts 0x13d2b334d6a6a73427923436cfa0f1ad363a1500 0x56951EdE351a4f2Ef80E650f94E4f5f0ebBDAA8c
+```
+0x56951EdE351a4f2Ef80E650f94E4f5f0ebBDAA8c has 5 voting tokens and 0 voting power
+
+---
 deployed the ballot wtih:
 ```shell
 npx hardhat run .\scripts\DeployTokenizedBallot.ts 
