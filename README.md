@@ -98,6 +98,14 @@ target block number:  7116725n
 transaction address:  0x6d8d08df69abfbf4c6e4ec2debc91486b272ab92a402c94db42ff50a41373082
 contract address:  0xeddc2a95cc1b315d302648760736c86f0e5347dd
 
+---
+
+get vote power in ballot by:
+```shell
+npx ts-node .\scripts\GetBallotVotePower.ts 0xeddc2a95cc1b315d302648760736c86f0e5347dd 0x92FE67bE9C0697ee32768cd2B2BCDC411774A056
+```
+0x92FE67bE9C0697ee32768cd2B2BCDC411774A056 has 15 voting power
+
 
 
 
