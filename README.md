@@ -106,7 +106,10 @@ npx ts-node .\scripts\GetBallotVotePower.ts 0xeddc2a95cc1b315d302648760736c86f0e
 ```
 0x92FE67bE9C0697ee32768cd2B2BCDC411774A056 has 15 voting power
 
-
-
-
+---
+get winning proposal:
+```shell
+npx ts-node .\scripts\GetWinning.ts 0xeddc2a95cc1b315d302648760736c86f0e5347dd
+```
+green is winning
 
