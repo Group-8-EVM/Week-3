@@ -92,8 +92,12 @@ npx ts-node .\scripts\GetVoteTokens.ts 0x13d2b334d6a6a73427923436cfa0f1ad363a150
 
 deployed the ballot wtih:
 ```shell
-npx hardhat run .\scripts\DeployTokenizedBallot.ts 
+npx ts-node .\scripts\DeployTokenizedBallot.ts 0x13d2b334d6a6a73427923436cfa0f1ad363a1500 red green blue
 ```
+target block number:  7116725n
+transaction address:  0x6d8d08df69abfbf4c6e4ec2debc91486b272ab92a402c94db42ff50a41373082
+contract address:  0xeddc2a95cc1b315d302648760736c86f0e5347dd
+
 
 
 
