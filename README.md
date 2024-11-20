@@ -113,3 +113,25 @@ npx ts-node .\scripts\GetWinning.ts 0xeddc2a95cc1b315d302648760736c86f0e5347dd
 ```
 green is winning
 
+---
+10 votes to red:
+```shell
+npx ts-node .\scripts\CastVote.ts 0xeddc2a95cc1b315d302648760736c86f0e5347dd 0 10
+```
+transaction:  0x17e0ebe79f2ede3fe902e1670340fa15975610023a02a87aff1a4d6115ef1a8f
+
+---
+get winning proposal:
+```shell
+npx ts-node .\scripts\GetWinning.ts 0xeddc2a95cc1b315d302648760736c86f0e5347dd
+```
+red is winning
+---
+
+get vote power in ballot by:
+```shell
+npx ts-node .\scripts\GetBallotVotePower.ts 0xeddc2a95cc1b315d302648760736c86f0e5347dd 0x92FE67bE9C0697ee32768cd2B2BCDC411774A056
+```
+0x92FE67bE9C0697ee32768cd2B2BCDC411774A056 has 5 voting power
+
+---
